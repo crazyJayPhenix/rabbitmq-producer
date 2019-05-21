@@ -31,6 +31,7 @@ public class Producer
         // 如果有一个队列名称跟Routing Key相等，那么消息会路由到这个队列
         // String exchange, String routingKey, BasicProperties props, byte[] body
         channel.basicPublish("", QUEUE_NAME, null, msg.getBytes());
+        System.out.println(456);
         channel.close();
         conn.close();
     }
